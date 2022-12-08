@@ -7,7 +7,7 @@ const Item = ({product}) => {
             <h1 className="text-h1 mx-4 mt-3">Jeans</h1>
                 <div id="contenedorProductos" className="d-flex gap-3 m-3 justify-content-evenly row">
                     <div className="col-xl-12 col-md-12 col-sm-1">
-                    <img src={img} className="card-img-top" alt="..."/>
+                    <img src={img} className="card-img-top" alt="imagen producto"/>
                     <div className="card-body">
                     <h5 className="card-title">{nombre}</h5>
                     <p className="card-text">{descripcion}</p>
