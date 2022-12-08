@@ -2,14 +2,17 @@ import React from "react";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import ItemListConteiner from "./components/ItemListConteiner";
+import {BrowserRouter,Routes,Route} from "react-router-dom";
 
 const App = () =>{
   return(
-    <div>
+    <BrowserRouter>
       <NavBar/>
-      <ItemListConteiner greeting={"Bienvenidos a Oxford Polo Club"}/>
-      <Footer/>
-    </div>
+        <Routes>
+            <Route path={"/"} element={<ItemListConteiner/>} />
+        </Routes>
+          <Footer/>
+    </BrowserRouter>
   )
 }
 
