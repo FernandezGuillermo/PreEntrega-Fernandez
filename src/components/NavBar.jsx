@@ -1,6 +1,6 @@
 import React from "react";
 import CartWidget from "./CartWidget";
-import { Link } from "react-router-dom";
+import { Link,NavLink } from "react-router-dom";
 
 const NavBar = () =>{
     return(
@@ -14,13 +14,16 @@ const NavBar = () =>{
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                    <Link className="nav-link" to="#">Inicio</Link>
+                    <NavLink className="nav-link" to={"/"}>Inicio</NavLink>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" to="#">Productos</Link>
+                    <NavLink className="nav-link" to={"/category/jeans"}>Jeans</NavLink>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" to="#">Sing In</Link>
+                    <NavLink className="nav-link" to={"/category/chinos"}>Chinos</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink className="nav-link" to={"/singIn"}>Sing In</NavLink>
                 </li>           
                 <li>
                     <CartWidget/>

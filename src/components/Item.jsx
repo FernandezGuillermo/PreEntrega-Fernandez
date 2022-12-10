@@ -1,20 +1,21 @@
+import React from "react"
+import { Link } from "react-router-dom"
+
 const Item = ({product}) => {
 
-    const {nombre, descripcion , img, precio,id} = product
+    const {nombre,img} = product
 
     return (
-        <section className="background-main container-fluid">
-            <h1 className="text-h1 mx-4 mt-3">Jeans</h1>
+        <section className="background-main container-fluid col-xl-4">
                 <div id="contenedorProductos" className="d-flex gap-3 m-3 justify-content-evenly row">
-                    <div className="col-xl-12 col-md-12 col-sm-1">
+                    <div className="col-xl-12 col-md-12 col-sm-12">
+                    <Link to={"/item/" + product.id} className="text-decoration-none">
                     <img src={img} className="card-img-top" alt="imagen producto"/>
+                    </Link>
                     <div className="card-body">
                     <h5 className="card-title">{nombre}</h5>
-                    <p className="card-text">{descripcion}</p>
-                    <p className="card-text">$ {precio} </p>
                     <div className="input-group mb-3">
                 </div>
-                <button id={id} className="btn btn-primary">Agregar al carrito</button>
             </div>
             </div>
             </div>
