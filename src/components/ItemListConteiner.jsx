@@ -12,8 +12,11 @@ const ItemListConteiner = () =>{
     
     useEffect(() =>{
         const promise = new Promise((res,rej)=>{
-            res(id ? products.filter(listProducts => listProducts.category === id) : products)
-        })
+            setTimeout(()=>{
+                res(id ? products.filter(listProducts => listProducts.category === id) : products)
+                },2000)
+            },)
+            
         promise.then((data)=>{
             setListProducts(data);
         })

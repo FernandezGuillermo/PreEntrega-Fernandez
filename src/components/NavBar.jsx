@@ -23,7 +23,7 @@ const NavBar = () =>{
                     <NavLink className="nav-link" to={"/category/chino"}>Chinos</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink className="nav-link" to={"/singIn"}>Sing In</NavLink>
+                    <NavLink className="nav-link" to={"/signIn"}>Sing In</NavLink>
                 </li>           
                 <li>
                     <CartWidget/>

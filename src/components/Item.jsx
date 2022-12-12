@@ -13,7 +13,7 @@ const Item = ({product}) => {
                     <img src={img} className="card-img-top" alt="imagen producto"/>
                     </Link>
                     <div className="card-body">
-                    <h5 className="card-title">{nombre}</h5>
+                    <h5 className="card-title my-3 text-center">{nombre}</h5>
                     <div className="input-group mb-3">
                 </div>
             </div>
