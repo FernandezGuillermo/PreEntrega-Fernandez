@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
-import {ItemCount} from "../components/ItemCount"
+import React, { useEffect, useState ,useContext } from "react";
+import {ItemCount} from "../components/ItemCount";
+import { CartContext } from "../context/CartContext";
 
 const ItemDetail = ({item}) =>{
     const [itemStock,setItemStock] = useState(0);

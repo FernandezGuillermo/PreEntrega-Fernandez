@@ -6,9 +6,12 @@ import ItemDetailConteiner from "./components/ItemDetailConteiner";
 import Error404 from "./components/Error404";
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import SingInConteiner from "./components/SingInConteiner";
+import CartContextProvider from "./context/CartContext";
+
 
 const App = () =>{
   return(
+    <CartContextProvider>
     <BrowserRouter>
       <NavBar/>
         <Routes>
@@ -20,6 +23,7 @@ const App = () =>{
         </Routes>
           <Footer/>
     </BrowserRouter>
+    </CartContextProvider>
   )
 }
 
