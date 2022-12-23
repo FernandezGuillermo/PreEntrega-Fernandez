@@ -4,9 +4,11 @@ import { CartContext } from "../context/CartContext";
 
 const ItemDetail = ({item}) =>{
     const [itemStock,setItemStock] = useState(0);
+    const {addItem} = useContext (CartContext);
 
     const onAdd = (quantity) =>{
         setItemStock(itemStock - quantity);
+        addItem(item,quantity);
     }
 
     useEffect(()=>{
