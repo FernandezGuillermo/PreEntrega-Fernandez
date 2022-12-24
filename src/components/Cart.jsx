@@ -39,13 +39,18 @@ const Cart = () =>{
                                 </tr>
                             ))
                         }
-                         <tr>
-                            <td>Total a pagar</td>
-                            <td>${sumTotal()}</td>
-                         </tr>
+                            <tr>
+                                <td  colSpan={2} >&nbsp;</td>
+                                <td className="text-end">Total a pagar :</td>
+                                <td>${sumTotal()}</td>
+                                <td><button className="btn btn-dark">Finalizar la compra</button></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
+            </div>
+            <div className="container text-end my-3">
+                <button className="btn btn-dark text-center" onClick={()=>clear()}>Vaciar el carrito</button>
             </div>
         </div>
     )
