@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { products } from '../utils/products';
-
 import { useEffect } from "react";
 import {ItemList} from '../components/ItemList';
+import {Prueba} from "../components/Prueba";
+
+
 
 
 const ItemListConteiner = () =>{
@@ -27,6 +29,7 @@ const ItemListConteiner = () =>{
     return(
         <div className="container">
             <ItemList listProducts={listProducts} />
+            <Prueba/>
         </div>
     )
 }
