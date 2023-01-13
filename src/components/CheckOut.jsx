@@ -2,7 +2,7 @@ import React from "react";
 import { CartContext } from "../context/CartContext";
 import { useContext } from "react";
 import { useState } from "react";
-import { getFirestore,collection,addDoc} from "firebase/firestore";
+import { getFirestore,collection,addDoc, writeBatch} from "firebase/firestore";
 
 
 const CheckOut = () =>{
@@ -16,7 +16,7 @@ const CheckOut = () =>{
         const fecha = new Date ();
         const order = {
             buyer:{name:nombre,phone:telefono,email:email},
-            items:cart.map(item =>({id:item.id,title:item.nombre,price:item.precio})),
+            items:cart.map(item =>({id:item.id,title:item.nombre,quntity:item.quantity,priceTotal:item.quantity * item.precio})),
             total:sumTotal(),
             order_date:`${fecha.getFullYear()}-${fecha.getMonth() + 1}-${fecha.getDate()} ${fecha.getHours()}:${fecha.getMinutes()}:${fecha.getSeconds()}`
         };
@@ -27,6 +27,11 @@ const CheckOut = () =>{
             addDoc(ordersCollection, order).then((data)=>{
                 console.log(data.id);
                 setOrderId(data.id);
+
+        //const batch = writeBatch(db);
+        //const updateOrder = doc(db,"orders",data.id);
+        //batch.update()
+
                 clear();
             });
         });
