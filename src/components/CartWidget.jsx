@@ -7,7 +7,7 @@ const CartWidget = () =>{
     const {cartTotal} = useContext(CartContext);
     return(
         <div>
-            <Link to={"/cart"} className="btn btn-dark position-relative">
+            <Link to={"/cart"} className="cart-btn btn position-relative">
                 <img src="images/img-carrito.png" alt="Carrito" width="32" />
                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{cartTotal()}</span>
             </Link>

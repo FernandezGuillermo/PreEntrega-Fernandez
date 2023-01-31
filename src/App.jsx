@@ -9,6 +9,8 @@ import { CheckOut } from "./components/CheckOut";
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import SingInConteiner from "./components/SingInConteiner";
 import CartContextProvider from "./context/CartContext";
+import Portada from "./components/Portada";
+import './App.css';
 
 
 const App = () =>{
@@ -17,7 +19,7 @@ const App = () =>{
     <BrowserRouter>
       <NavBar/>
         <Routes>
-            <Route path={"/"} element={<ItemListConteiner/>} />
+            <Route path={"/"} element={<Portada/>} />
             <Route path={"/category/:id"} element={<ItemListConteiner/>} />
             <Route path={"/item/:id"} element={<ItemDetailConteiner/>} />
             <Route path={"/signIn"} element={<SingInConteiner/>} />

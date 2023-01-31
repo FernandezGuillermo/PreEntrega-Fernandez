@@ -1,9 +1,124 @@
-.nav-item{
-  background-color: aqua;
+.navbar{
+  background-color: rgba(16, 38, 73, 1);
+}
+
+a.nav-link{
+  color:white;
+  font-family: 'Manrope', sans-serif;
+}
+
+a.nav-link:hover{
+  color:#9d0703;
+}
+
+a.navbar-brand{
+  color: white;
+}
+
+a.navbar-brand:hover{
+  color: #9d0703;
+}
+
+.navbar-toggler{
+  background-color: white;
+}
+
+.cart-btn{
+  background-color: rgba(16, 38, 73, 1);;
+}
+
+.cart-btn:hover{
+  background-color: #9d0703;
+}
+
+.portada{
+  width: 100%;
+  background-color: #9d0703;
+}
+
+.text-marca{
+  font-family: 'Manrope', sans-serif;
+  color: white;
+  font-size: 3rem;
+}
+
+.text-portada{
+  font-family: 'Caveat', cursive;
+  color: white;
+  font-size: 2rem;
+}
+
+.img-portada-1{
+  max-height: auto;
+  width: 100%;
+}
+
+.img-portada-2{
+  max-height: auto;
+  width: 100%;
+}
+
+.img-portada-3{
+  max-height: auto;
+  width: 100%;
 }
 
 .footer{
   background-color: rgba(16, 38, 73, 1);
 }
 
+.footer-logo{
+  height: 70%;
+}
+
+.footer__text{
+  color: white;
+  font-size: 15px;
+  font-family: 'Manrope', sans-serif;
+}
+
+.footer-text-logo{
+  color: white;
+  font-size: 15px;
+  font-family: 'Manrope', sans-serif;
+}
+
+.footer__direccion{
+  color: white;
+}
+
+.footer__tel{
+  color: white;
+}
+
+.footer__instagram{
+  height: 50px;
+}
+
+.footer__facebook{
+  height: 50px;
+}
+
+.footer__ubicacion{
+  height: 40px;
+}
+
+.footer__cel{
+  height: 40px;
+}
+
+.img-polo-signIn{
+  height: auto;
+  width: 100%;
+}
+
+
+.btn-cart{
+  background-color:  rgba(16, 38, 73, 1);
+  color: white;
+}
+
+.img-item{
+  height: auto;
+}
 

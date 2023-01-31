@@ -2,7 +2,7 @@ import React from "react";
 import { CartContext } from "../context/CartContext";
 import { useContext } from "react";
 import { useState } from "react";
-import { getFirestore,collection,addDoc, writeBatch} from "firebase/firestore";
+import { getFirestore,collection,addDoc} from "firebase/firestore";
 
 
 const CheckOut = () =>{
@@ -28,17 +28,13 @@ const CheckOut = () =>{
                 console.log(data.id);
                 setOrderId(data.id);
 
-        //const batch = writeBatch(db);
-        //const updateOrder = doc(db,"orders",data.id);
-        //batch.update()
-
                 clear();
             });
         });
     }
 
     return(
-        <div className="container">
+        <div className="container checkOut m-6">
             <div className="row my-5">
                 <div className="col-md-6">
                     <form>

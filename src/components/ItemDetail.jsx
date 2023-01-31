@@ -18,9 +18,9 @@ const ItemDetail = ({item}) =>{
     return (
         <div className="row">
         <div className="col-md-4 offset-md-2">
-            <img src={item.img} alt={item.nombre} className="img-fluid" />
+            <img src={item.img} alt={item.nombre} className="img-fluid img-item my-auto" />
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4 my-auto">
             <h1>{item.nombre}</h1>
             <p>{item.descripcion}</p>
             <p><b>${item.precio}</b></p>

@@ -3,8 +3,16 @@ import CartWidget from "./CartWidget";
 import { Link,NavLink } from "react-router-dom";
 
 const NavBar = () =>{
+
+    const navLinkStyles = ({isActive}) =>{
+        return{
+            fontWeight: isActive ? 'bold' : 'normal',
+            color: isActive ? 'white' : 'white',
+        }
+    }
+
     return(
-        <div>
+        <div className="Nav">
             <nav className="navbar navbar-expand-lg bg-oscuro"> 
             <div className="container-fluid mt-2">
             <Link className="navbar-brand" to={"/"}>Oxford Polo Club</Link>
@@ -14,16 +22,16 @@ const NavBar = () =>{
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                    <NavLink className="nav-link" to={"/"}>Inicio</NavLink>
+                    <NavLink style={navLinkStyles} className="nav-link" to={"/"}>Inicio</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink className="nav-link" to={"/category/jeans"}>Jeans</NavLink>
+                    <NavLink style={navLinkStyles} className="nav-link" to={"/category/jeans"}>Jeans</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink className="nav-link" to={"/category/chino"}>Chinos</NavLink>
+                    <NavLink style={navLinkStyles} className="nav-link" to={"/category/chino"}>Chinos</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink className="nav-link" to={"/signIn"}>Sing In</NavLink>
+                    <NavLink style={navLinkStyles} className="nav-link" to={"/signIn"}>Sing In</NavLink>
                 </li>           
                 <li>
                     <CartWidget/>
